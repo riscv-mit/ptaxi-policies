@@ -21,7 +21,7 @@ void ptaxi_policy_return_address(uint8_t tagbit) {
   policy.tag_arg1_mask = tagbit;
   policy.tag_arg1_match = 0;
   policy.action |= PTAXI_ACTION_BLOCK;
-  policy.ignore_count = 2;
+  policy.ignore_count = 4;
   ptaxi_add_policy(policy);
 
   ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_STORE64);

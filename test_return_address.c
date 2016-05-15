@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include "ptaxi.h"
 
+#define TAG_RETURNADDRESS 1
+
 void __attribute__ ((constructor)) ptaxi_app_policy() {
-  ptaxi_policy_return_address(1);
+  ptaxi_policy_return_address(TAG_RETURNADDRESS);
   ptaxi_enforce_policy();
 }
 

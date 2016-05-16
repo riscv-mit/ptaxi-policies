@@ -24,9 +24,9 @@ void ptaxi_policy_return_address(uint8_t tagbit) {
   policy.ignore_count = 4;
   ptaxi_add_policy(policy);
 
-  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_STORE64);
-  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_LOAD64);
-  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_COPY);
+  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_STORE64, 1, 0);
+  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_LOAD64, 1, 0);
+  ptaxi_base_policy_propatgate_by_type(tagbit, PTAXI_INSN_TYPE_COPY, 1, 0);
   ptaxi_base_policy_clear_by_type(tagbit, PTAXI_INSN_TYPE_STORE);
   ptaxi_base_policy_clear_by_type(tagbit, PTAXI_INSN_TYPE_LOAD);
   ptaxi_base_policy_clear_by_type(tagbit, PTAXI_INSN_TYPE_OP);

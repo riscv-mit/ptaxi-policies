@@ -8,7 +8,7 @@
 
 // Use macro so that we don't have to set previous return pointers.
 void ptaxi_tag_command(code) {
-  __asm__("tagcmd zero,zero,%0" ::"r"(code));
+  __asm__("tagcmd zero,%0,zero" ::"r"(code));
 
 }
 
